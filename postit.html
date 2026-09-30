@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Posting with AES</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="css/postit.css">
+</head>
+<body>
+    <main class="container">
+        <div class="header-line">
+            <h2>AES-192 Social Media Posting</h2>
+            <p>Symmetric Encryption and Decryption</p>
+        </div>
+
+        <div class="reg-form" id="userForm">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" placeholder="Enter your full name">
+            <br>
+            <button class="btn" onclick="setUser()">Continue</button>
+        </div>
+
+        <div class="reg-form hidden" id="postForm">
+            <h3>Welcome, <span id="displayName"></span></h3>
+
+            <label for="post">Caption</label>
+            <textarea id="post" rows="5" placeholder="Write your caption..."></textarea>
+            <br>
+            <button class="btn" onclick="createPost()">POST</button>
+        </div>
+
+        <div class="results">
+            <h2>Your Posts</h2>
+            <div id="thread"></div>
+        </div>
+    </main>
+
+    <script src="js/postit.js"></script>
+</body>
+</html>
